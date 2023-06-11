@@ -60,6 +60,7 @@ const luckyPhrase = document.querySelector("#phrases")
 // eventos
 openCookie.addEventListener("click", luck)
 openAnotherCookie.addEventListener("click", toggleScreen)
+document.addEventListener("keydown", keydown)
 
 // funciton
 function luck() {
@@ -72,4 +73,10 @@ function luck() {
 function toggleScreen() {
   screenOne.classList.toggle("hide")
   screenTwo.classList.toggle("hide")
+}
+
+function keydown(e) {
+  if (e.key == "Enter") {
+    luck()
+  }
 }
